@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Challenge Set-D</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin:  auto;
+            justify-content: center;
+
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+
+
+        }
+      
+        .card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .card-category {
+            color: #666;
+            font-size: 0.9rem;
+            text-transform: capitalize;
+        }
+        button{
+            border: 2px solid black;
+            height: 20px;
+            width: 80px;
+            cursor: pointer;
+            margin-left: 500px;
+            margin-top: 50px;
+            border-radius: 10px;
+
+
+        }
+        /* responsive design*/
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+             h1 {
+                font-size: 64px;
+            }
+
+            .gallery {
+                grid-template-columns:  minmax(200px, 1fr);
+                gap: 32px;
+            }
+
+            .card-image {
+                height: 150px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 32px;
+            }
+
+            .gallery {
+                grid-template-columns: 225px;
+            }
+        }
+
+
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="gallery" class="gallery">
+            <div class="loading">Loading...</div>
+        </div>
+    </div>
+    <button onclick="addPage()">Prev</button>
+    <button onclick="subtractPage()">Next</button>
+
+    
+    <script src="script.js">
+        
+    </script>
+</body>
+</html>
